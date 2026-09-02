@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
@@ -53,6 +54,7 @@ function Login() {
         <h1>Employee Attendance</h1>
 
         <h2>Login</h2>
+        
 
         {error && (
           <p className="error">{error}</p>
@@ -78,10 +80,12 @@ function Login() {
           required
         />
 
-        <button type="submit">
-          Login
-        </button>
+        <button type="submit">Login</button>
 
+<p>
+  Don't have an account?{" "}
+  <Link to="/register">Create Account</Link>
+</p>
       </form>
 
     </div>
