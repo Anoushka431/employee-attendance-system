@@ -25,7 +25,7 @@ app.use(
 
 app.use(express.json());
 
-app.options("/api/auth/login", cors());
+// app.options("/api/auth/login", cors());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/attendance", attendanceRoutes);
